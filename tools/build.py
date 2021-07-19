@@ -96,7 +96,8 @@ else:
 
 # Deps
 print("\nChecking if sshpass is already installed")
-depp = subprocess.check_output(['apt', 'list', '--installed', 'sshpass'])
+depp = subprocess.check_output(['apt', 'list', '--installed', 'sshpass'], text = True)
+print(depp)
 if "sshpass" in str(depp):
     print("Cool, sshpass is installed so lets continue\n")
     pass
