@@ -27,7 +27,7 @@ def ota():
     print("\nUnshallowing the repository\n")
     os.system("git fetch LegionOS-Devices --unshallow")
     os.system("git checkout 11")
-    os.system("git pull LegionOS-Devices 11")
+    os.system("git pull --rebase")
     print ("")
     print ("Device directory exists : " + str(path.exists(codename)))
     result=path.exists(codename)
